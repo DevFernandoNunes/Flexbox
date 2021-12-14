@@ -1,0 +1,423 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* O código acima altera a forma com que a altura e largura dos elementos seja calculadas, fazem com que as mesmas incluem os valores de padding e border */
+
+/**********************************/
+/* 0. Variáveis
+/* 1. Container
+/* 2. Menu
+/* 3. Header
+/* 4. Quem somos
+/* 5. Nossos cursos
+/* 6. Planos
+/* 7. Vantagens
+/* 8. Newsletter
+/* 9. Footer
+/**********************************/
+
+/**********************************/
+/* 0. Variáveis
+/**********************************/
+
+:root{ /* Indica o nível mais alto do css, com especificidade mais alta */
+	--ff-primary: "Nunito", Helvetica, Arial, sans-serif;
+	--clr-green-dark: #049A40;
+	--clr-green-light: #0BF96A;
+	--clr-pink-dark: #E10BF9;
+	--clr-pink-light: #F3A0FD;
+	--clr-white: #F5F5F5;
+}
+
+hr{
+	border: none; /* Mexendo na borda */
+	background-color: var(--clr-pink-dark);
+	height: 2px; /* Definir a altura */
+	width: 140px; /* Definir a largura */
+	margin: 20px auto;	
+}
+
+/**********************************/
+/* 1. Estilos gerais
+/**********************************/
+
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+	background-color: var(--clr-white); 
+	font-family: var(--ff-primary);
+} /* Fundo da página utilizando uma variável */
+
+
+a,
+a:hover, /* Quando o mouse está por cima dele */
+a:active, /* Quando o link é clicado */
+a:link, /* Quando o link nunca foi clicado */
+a:visited /* Quando o link ja foi clicando alguma vez */{
+	text-decoration: none; /* Remover o sublinhado */
+	color: black; /* Mudando a cor da letra */
+} /* Alteração de estados do link */
+
+p{
+	line-height: 21.82px; /* Define a altura da linha */
+	padding: 0 10px;
+}
+
+.section_titulo{
+	text-align: center; /* Alinha o texto */
+	font-size: 3rem;
+	margin-bottom: 10px;
+}
+
+img{
+	display: block; /* Evita alguns problemas que podem surgir em alguns navegadores */
+	max-width: 100%;
+}
+
+	
+/**********************************/
+/* 2. Menu
+/**********************************/
+
+.menu-bg{
+	background-color: var(--clr-green-light); /* Mudar a cor de fundo */
+}
+
+.menu{
+	display: flex; /* Definir como flex container, a logo e os links ficam lado a lado  */
+	align-items: center; /* Alinhar os intens no centro */
+	justify-content: space-between; /* Separar os elementos, logo e link se separam e cada um vai para um lado da tela */
+	max-width: 960px; /* Definir o tamanho do menu */
+	margin: 0 auto; /* Centralizar o menu, falando que as margens superior e inferior são 0 e a da esquerda e da direita são auto, (O "O auto significa que o espaço que sobrar sempre será divido por dois para se ajustar na tela para que a margem da direita e da esquerda sempre tenham o mesmo tamanho */
+	flex-wrap: wrap; /* Vai permitir que ao diminuir a tela o menu quebre e mude sua posição para não dar conflito de responsividade */
+}
+
+.menu__logo{
+	margin: 10px;
+}
+
+.nav_list{
+	display: flex;
+	flex-wrap: wrap; /* Aqui é uma forma de dizer que eu quero que o menu quebre em varias linhas */
+}
+
+.nav__link{
+	padding: 20px 10px; /* Quer dizer que eu quero que o botão do menu fique "20px" de distancia inferior e superior e "10px" a esquerda e a direita */
+}
+
+/**********************************/
+/* 3. Header
+/**********************************/
+
+.intro{
+	font-weight: bold; /* Para colocar o texto em negrito */
+	font-size: 3rem; /* Define o tamanho da fonte */
+	text-align: center; /* Define o alinhamento do texto */
+	margin: 0 auto;
+	padding: 25px 0; /* Para separar o texto no menu ja feito */
+}
+
+/**********************************/
+/* 4. Quem somos
+/**********************************/
+
+.somos{
+	max-width: 960px; /* Definir a largura com limite máximo */
+	margin: 0 auto; 
+}
+
+.somos-c{
+	display: flex; /* Define que os elementos fiquem lado a lado */
+	flex-wrap: wrap; /* Permite que os elementos fiquem um do lado do outro */
+	align-items: center; /* Vai centralizar o texto */
+}
+
+.somos-c__texto{
+	flex: 6 1 160px; /* Versão abreviada dos itens a seguir: 
+	flex-grow: (A sessão texto deve ser 6 x maior que os outros itens)
+	flex-shrink: ( Permitindo que o item ele reduza o seu tamanho para caber dentro do flex-container)
+	flex-basis: (O tamanho inicial desse elemento é 160px) */
+}
+
+.somos-c__img{
+	flex: 1 1 350px;
+}
+
+/**********************************/
+/* 5. Nossos cursos
+/**********************************/
+
+.cursos{
+	max-width: 960px; /* Definir largura máxima */
+	margin: 0 auto; /* Centralizar o projeto */
+}
+
+.cursos-c{
+	display: flex; /* Transformar em container   */
+	flex-wrap: wrap; /* Permitir quebra de página */
+	justify-content: center; /* Centralizar os elementos no centro */
+}
+
+.curso{
+	width: 280px; /* Definir largura */
+	margin: 0 20px; /* Margem da baixo e de cima "0" e da esquerda e da direita"auto" de auto completar */
+}
+
+.curso__titulo{
+	font-size: 1.5rem; /* Definir o tamanho da font */
+	text-align: center; /* Alinhar o texto */
+	margin: 10px 0 5px 0; /* Superior/ Direita/ Baixo/ Esquerda */
+}
+
+
+/**********************************/
+/* 6. Planos
+/**********************************/
+
+.planos{
+	background-color: var(--clr-pink-light);
+}
+
+.planos-c{
+	max-width: 960px; /* Define a altura máxima */
+	margin: 0 auto; /* Centralizar container */
+	display: flex; /* Definir como container */
+	flex-wrap: wrap; /* Permitir que os elementos quebrem um em baixo do outro */
+	justify-content: center; /* Centralizando os flex items dentro do flex container */
+	align-items: flex-end;
+}
+
+.plano{
+	width: 290px;
+	margin: 10px 10px;
+	border: 2px solid var(--clr-green-light);
+}
+
+.plano__titulo{
+	font-size: 3rem; /* 1rem = 16px(tamanho padrão da fonte nos navegadores) */
+	font-weight: bold;
+	text-align: center;
+	margin: 10px auto;
+}
+
+.plano__preco{
+	font-size: 3rem;
+	display: block;
+	text-align: center;
+	font-weight: bold;
+}
+
+.plano__preco sup{
+	position: relative; /* Consigo alterar a posição dele */
+	font-size: 1.5rem;
+	top: -20px;
+}
+
+.plano__divisor{
+	background-color: var(--clr-green-light);
+	width: 20px;
+	margin: 5px auto;
+}
+
+.plano-lista{
+	max-width: 195px;
+	margin: 0 auto;
+}
+
+.plano-lista__item{
+	margin: 10px 0;
+	font-style: italic;
+	display: flex;
+	align-items: center;
+}
+
+.plano-lista__item::before{
+	content: "";
+	display: block;
+	width: 5px;
+	height: 5px;
+	background-color: var(--clr-green-light);
+	border-radius: 5px;
+	margin-right: 5px;
+} /* Insere um conteúdo na página sem que insira algo no HTML, o before quer dizer que: eu quero que o elemento apareça antes do conteúdo do elemento da lista */
+
+.plano__btn-comprar{
+	display: block;
+	max-width: 180px;
+	font-size: 2rem;
+	font-weight: bold;
+	margin: 15px auto;
+	padding-left: 10px;
+	text-align: center;
+	text-transform: uppercase;
+	border: 2px solid var(--clr-green-light);
+}
+
+.plano:last-child{
+	background-color: var(--clr-green-light);
+}
+
+.plano:last-child, .plano:last-child .plano__btn-comprar{
+	border: 2px solid var(--clr-pink-dark);
+}
+
+.plano:last-child .plano-lista__item::before, .plano:last-child .plano__divisor{
+	background: var(--clr-pink-dark);
+}
+
+@media (max-width: 800px){ /* Define a configuração quando a tela for da largura máxima especificada fazendo com que as configurações se adaptem nela */
+	.plano:nth-child(3){ /* Muda a ordem referente aos filhos dentro do container */
+		order: -2;
+	} /* Passou de ordem 3 para ordem -2 */
+
+	.plano:nth-child(2){
+		order: -1;
+	}
+}
+
+
+
+/**********************************/
+/* 7. Vantagens
+/**********************************/
+
+.vantagens{
+	max-width: 960px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.vantagem{
+	max-width: 240px;
+	margin: 10px;
+}
+
+.vantagem__titulo{
+	font-size: 1.7rem;
+	margin-bottom: 5px;
+	margin-left: 10px;
+}
+
+.vantagem__titulo::before{
+	content: "";
+	display: inline-block;
+	width: 10px;
+	height: 25px;
+	margin-right: 5px;
+}
+
+.vantagem:nth-of-type(3n+1) .vantagem__titulo::before{
+	background-color: var(--clr-green-light);
+} /* Essa propriedade permite que você selecione elementos filhos com base na sua ordem de origem */
+/* Aqui você está selecionado o pseudo-elemento do título que está dentro do bloco de vantagem selecionado */
+
+.vantagem:nth-of-type(3n+2) .vantagem__titulo::before{
+	background-color: var(--clr-pink-dark);
+}
+
+.vantagem:nth-of-type(3n+3) .vantagem__titulo::before{
+	background-color: var(--clr-green-dark);
+}
+
+@media (max-width: 800px){
+	.vantagem{
+		max-width: 220px;
+	}
+}
+
+/* Explicação do calculo:
+Para n=0
+3 x n +1 = 1
+Logo, o primeiro filho elemento será selecionado */
+
+/**********************************/
+/* 8. Newsletter
+/**********************************/
+
+.newsletter{
+	background-color: var(--clr-green-light);
+}
+
+.newsletter-c{
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 50px 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.newsletter-info{
+	flex: 1 1 260px;
+	padding-left: 10px;
+}
+
+.newsletter-info__titulo{
+	font-size: 2.62rem;
+	font-weight: bold;
+}
+
+.newsletter-info__descricao{
+	font-style: italic;
+}
+
+.newsletter-form__input{
+	flex: 3 1 260px;
+	font-size: 1.25rem;
+	width: 325px;
+	color: #000000;
+	font-style: italic;
+	font-family: var(--ff-primary);
+	border: 10px solid var(--clr-pink-dark);
+	padding: 10px;
+	margin: 0;	
+	border-radius: 0px;
+
+}
+
+.newsletter-form{
+	flex: 2 1 260px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.newsletter-form__submit{
+	flex: 1 1 3;
+	width: 192px;
+	font-family: var(--ff-primary);
+	font-size: 2.25rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	background: var(--clr-pink-dark);
+	color: #000000;
+	cursor: pointer;
+	border: none;
+	padding: 15px;
+}
+
+
+
+/**********************************/
+/* 9. Footer
+/**********************************/
+
+.footer{
+	background: var(--clr-pink-light);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 55px calc((100% - 960px)/2); /* Aqui você vai pegar e usar a formula calc, no que diz... pega 100% e subtraia por 960px e divida por 2, achando assim o valor a direita e esquerda do efeito da tags superiores */
+}
+
+.footer__copyright, .footer__logo{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+
