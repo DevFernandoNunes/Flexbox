@@ -62,7 +62,7 @@ $ git clone <https://github.com/DevFernandoNunes/Flexbox.git>
  
 ## Desenvolvedor
 
-| [<img src="https://avatars.githubusercontent.com/u/95880342?v=4" width=115><br><sub>Fernando Nunes</sub>](https://github.com/camilafernanda) |
+| [<img src="https://avatars.githubusercontent.com/u/95880342?v=4" width=115><br><sub>Fernando Nunes</sub>](https://github.com/DevFernandoNunes) |
 | :---: |
  
 
