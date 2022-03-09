@@ -24,8 +24,6 @@
 
 <p align="justify">
  Projeto de um site institucional concluído, visa trabalhar as habilidades como, HTML, CSS, Git.
- 
-![Capture](https://user-images.githubusercontent.com/95880342/157151522-3e0e28f9-4402-4f6f-8113-8c135de096c2.PNG)
 
 ![Flexbox-gif](https://user-images.githubusercontent.com/95880342/157268541-ad1538c6-6c4d-4c0a-bd17-8d874a278c2e.gif)
 
