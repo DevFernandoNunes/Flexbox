@@ -45,7 +45,7 @@
 
 Antes de começar você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 [Git](https://git-scm.com/), [NodeJS](https://nodejs.org/en/).
-Além disto é bom ter um editor para trabahar com o código como [VScode](https://code.visualstudio.com/).
+Além disto é bom ter um editor para trabalhar com o código como [VScode](https://code.visualstudio.com/).
 
 Está tudo pronto agora... é só baixar o arquivo e executar. Você pode [acessar o código fonte do projeto](https://github.com/DevFernandoNunes/Flexbox)
 
